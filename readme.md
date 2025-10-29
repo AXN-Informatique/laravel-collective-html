@@ -8,12 +8,12 @@ Le package original LaravelCollective HTML a été abandonné. Ce fork maintient
 
 ## Compatibilité
 
-- PHP: ^8.1
+- PHP: ^8.2
 - Laravel: ^10.0 | ^11.0 | ^12.0
 
 ## Versions
 
-- **7.x** : Laravel 10, 11, 12 + PHP 8.1+ (branche `develop`)
+- **7.x** : Laravel 10, 11, 12 + PHP 8.2+ (branche `develop`)
 - **6.x** : Laravel 6-10 + PHP 7.2+ (branche `6.x`)
 
 ## Installation

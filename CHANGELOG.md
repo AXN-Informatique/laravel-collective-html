@@ -16,14 +16,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Instructions d'installation avec repository Git personnalisé
 
 ### Changed
-- **BREAKING**: Version minimum de PHP passée de 7.2.5 à 8.1
+- **BREAKING**: Version minimum de PHP passée de 7.2.5 à 8.2
 - **BREAKING**: Version minimum de Laravel passée de 6.0 à 10.0
-- Mise à jour de PHPUnit vers ^10.5|^11.0
-- Mise à jour de Mockery vers ^1.6
+- Mise à jour de PHPUnit vers ^10.5|^11.5
+- Mise à jour de Mockery vers ^1.6.12
+- Mise à jour d'Illuminate Database vers ^12.36
+
+### Added (Dev)
+- Ajout de Laravel Pint ^1.25 pour le formatage du code
 
 ### Removed
 - Support pour Laravel 6, 7, 8 et 9
-- Support pour PHP < 8.1
+- Support pour PHP < 8.2
 - Mention "abandoned" du package dans composer.json
 
 ## [6.x] - Historique original

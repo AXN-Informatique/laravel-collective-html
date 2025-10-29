@@ -2,13 +2,12 @@
 
 namespace Collective\Html\Eloquent;
 
+use Illuminate\Support\Str;
 use ReflectionClass;
 use ReflectionMethod;
-use Illuminate\Support\Str;
 
 trait FormAccessible
 {
-
     /**
      * A cached ReflectionClass instance for $this
      *
@@ -17,8 +16,7 @@ trait FormAccessible
     protected $reflection;
 
     /**
-     * @param string $key
-     *
+     * @param  string  $key
      * @return mixed
      */
     public function getFormValue($key)
@@ -28,8 +26,8 @@ trait FormAccessible
         // If the attribute is listed as a date, we will convert it to a DateTime
         // instance on retrieval, which makes it quite convenient to work with
         // date fields without having to create a mutator for each property.
-        if (in_array($key, $this->getDates())) {
-            if (! is_null($value)) {
+        if (\in_array($key, $this->getDates())) {
+            if (! \is_null($value)) {
                 $value = $this->asDateTime($value);
             }
         }
@@ -53,7 +51,7 @@ trait FormAccessible
                 return $relatedModel->getFormValue($key);
             }
 
-            return data_get($relatedModel, empty($key)? null: $key);
+            return data_get($relatedModel, empty($key) ? null : $key);
         }
 
         // No form mutator, let the model resolve this
@@ -64,17 +62,14 @@ trait FormAccessible
      * Check for a nested model.
      *
      * @param  string  $key
-     *
      * @return bool
      */
     public function isNestedModel($key)
     {
-        return in_array($key, array_keys($this->getRelations()));
+        return \in_array($key, array_keys($this->getRelations()));
     }
 
     /**
-     * @param $key
-     *
      * @return bool
      */
     public function hasFormMutator($key)
@@ -82,26 +77,24 @@ trait FormAccessible
         $methods = $this->getReflection()->getMethods(ReflectionMethod::IS_PUBLIC);
 
         $mutator = collect($methods)
-          ->first(function (ReflectionMethod $method) use ($key) {
-              return $method->getName() === 'form' . Str::studly($key) . 'Attribute';
-          });
+            ->first(function (ReflectionMethod $method) use ($key) {
+                return $method->getName() === 'form'.Str::studly($key).'Attribute';
+            });
 
         return (bool) $mutator;
     }
 
     /**
-     * @param $key
-     * @param $value
-     *
      * @return mixed
      */
     private function mutateFormAttribute($key, $value)
     {
-        return $this->{'form' . Str::studly($key) . 'Attribute'}($value);
+        return $this->{'form'.Str::studly($key).'Attribute'}($value);
     }
 
     /**
      * Get a ReflectionClass Instance
+     *
      * @return ReflectionClass
      */
     protected function getReflection()

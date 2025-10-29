@@ -16,7 +16,7 @@ use Illuminate\Events\Dispatcher;
 |
 */
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -34,12 +34,12 @@ date_default_timezone_set('UTC');
 /*
  * Prepare the db connection (spoofing that shit)
  */
-$capsule = new Capsule;
+$capsule = new Capsule();
 $capsule->addConnection([
-  'driver'   => 'sqlite',
-  'database' => ':memory:',
+    'driver' => 'sqlite',
+    'database' => ':memory:',
 ]);
-$capsule->setEventDispatcher(new Dispatcher);
+$capsule->setEventDispatcher(new Dispatcher());
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 

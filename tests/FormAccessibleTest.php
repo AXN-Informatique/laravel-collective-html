@@ -2,14 +2,14 @@
 
 use Carbon\Carbon;
 use Collective\Html\Eloquent\FormAccessible;
-use Illuminate\Database\Eloquent\Model;
 use Collective\Html\FormBuilder;
 use Collective\Html\HtmlBuilder;
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Routing\RouteCollection;
 use Illuminate\Routing\UrlGenerator;
-use Illuminate\Database\Capsule\Manager as Capsule;
 use Mockery as m;
 
 class FormAccessibleTest extends PHPUnit\Framework\TestCase
@@ -22,15 +22,15 @@ class FormAccessibleTest extends PHPUnit\Framework\TestCase
         $this->now = Carbon::now();
 
         $this->modelData = [
-          'string'     => 'abcdefghijklmnop',
-          'email'      => 'tj@tjshafer.com',
-          'address'    => [
-              'street' => 'abcde st'
-          ],
-          'array'      => [1, 2, 3,],
-          'transform_key' => 'testing testing',
-          'created_at' => $this->now,
-          'updated_at' => $this->now,
+            'string' => 'abcdefghijklmnop',
+            'email' => 'tj@tjshafer.com',
+            'address' => [
+                'street' => 'abcde st',
+            ],
+            'array' => [1, 2, 3],
+            'transform_key' => 'testing testing',
+            'created_at' => $this->now,
+            'updated_at' => $this->now,
         ];
 
         $this->urlGenerator = new UrlGenerator(new RouteCollection(), Request::create('/foo', 'GET'));
@@ -39,7 +39,7 @@ class FormAccessibleTest extends PHPUnit\Framework\TestCase
         $this->formBuilder = new FormBuilder($this->htmlBuilder, $this->urlGenerator, $this->viewFactory, 'abc');
     }
 
-    public function testItCanMutateValuesForForms()
+    public function test_it_can_mutate_values_for_forms()
     {
         $model = new ModelThatUsesForms($this->modelData);
         $user = new User(['name' => 'Anton']);
@@ -54,12 +54,12 @@ class FormAccessibleTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('Get name for form: Anton', $model->getFormValue('user.name'));
     }
 
-    public function testItCanMutateRelatedValuesForForms()
+    public function test_it_can_mutate_related_values_for_forms()
     {
         $model = new ModelThatUsesForms($this->modelData);
         $relatedModel = new ModelThatUsesForms($this->modelData);
         $relatedModel->address = [
-            'street' => '123 Evergreen Terrace'
+            'street' => '123 Evergreen Terrace',
         ];
         $model->setRelation('related', $relatedModel);
 
@@ -69,13 +69,13 @@ class FormAccessibleTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($this->formBuilder->getValueAttribute('related[address][street]'), '123 Evergreen Terrace');
     }
 
-    public function testItCanGetRelatedValueForForms()
+    public function test_it_can_get_related_value_for_forms()
     {
         $model = new ModelThatUsesForms($this->modelData);
         $this->assertEquals($model->getFormValue('address.street'), 'abcde st');
     }
 
-    public function testItCanUseGetAccessorValuesWhenThereAreNoFormAccessors()
+    public function test_it_can_use_get_accessor_values_when_there_are_no_form_accessors()
     {
         $model = new ModelThatUsesForms($this->modelData);
         $this->formBuilder->setModel($model);
@@ -83,7 +83,7 @@ class FormAccessibleTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($this->formBuilder->getValueAttribute('email'), 'mutated@tjshafer.com');
     }
 
-    public function testItReturnsSameResultWithAndWithoutThisFeature()
+    public function test_it_returns_same_result_with_and_without_this_feature()
     {
         $modelWithAccessor = new ModelThatUsesForms($this->modelData);
         $modelWithoutAccessor = new ModelThatDoesntUseForms($this->modelData);
@@ -100,7 +100,7 @@ class FormAccessibleTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($valuesWithAccessor, $valuesWithoutAccessor);
     }
 
-    public function testItCanStillMutateValuesForViews()
+    public function test_it_can_still_mutate_values_for_views()
     {
         $model = new ModelThatUsesForms($this->modelData);
         $this->formBuilder->setModel($model);
@@ -109,7 +109,7 @@ class FormAccessibleTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($model->created_at, '1 second ago');
     }
 
-    public function testItDoesntRequireTheUseOfThisFeature()
+    public function test_it_doesnt_require_the_use_of_this_feature()
     {
         $model = new ModelThatDoesntUseForms($this->modelData);
         $this->formBuilder->setModel($model);
@@ -172,11 +172,11 @@ class User extends Model
 
     public function formNameAttribute($value)
     {
-        return 'Get name for form: ' . $value;
+        return 'Get name for form: '.$value;
     }
 
     public function getNameAttribute($value)
     {
-        return 'Get name: ' . $value;
+        return 'Get name: '.$value;
     }
 }
