@@ -13,8 +13,9 @@ Le package original LaravelCollective HTML a été abandonné. Ce fork maintient
 
 ## Versions
 
-- **7.x** : Laravel 10, 11, 12 + PHP 8.2+ (branche `develop`)
+- **7.x** : Laravel 10, 11, 12 + PHP 8.2+ (branche `7.x`)
 - **6.x** : Laravel 6-10 + PHP 7.2+ (branche `6.x`)
+- **develop** : Développement futur (8.x)
 
 ## Installation
 
