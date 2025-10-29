@@ -1,11 +1,11 @@
 {
-    "name": "laravelcollective/html",
+    "name": "axn/laravel-collective-html",
     "description": "HTML and Form Builders for the Laravel Framework",
     "license": "MIT",
     "homepage": "https://laravelcollective.com",
     "support": {
-        "issues": "https://github.com/LaravelCollective/html/issues",
-        "source": "https://github.com/LaravelCollective/html"
+        "issues": "https://github.com/AXN-Informatique/laravel-collective-html/issues",
+        "source": "https://github.com/AXN-Informatique/laravel-collective-html"
     },
     "authors": [
         {
@@ -15,6 +15,10 @@
         {
             "name": "Taylor Otwell",
             "email": "taylorotwell@gmail.com"
+        },
+        {
+            "name": "AXN Informatique",
+            "email": "developpement@axn.fr"
         }
     ],
     "require": {

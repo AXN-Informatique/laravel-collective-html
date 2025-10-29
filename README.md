@@ -38,13 +38,15 @@ Ajoutez ce repository dans la section `repositories` de votre `composer.json` :
 
 **Pour Laravel 10, 11, 12 (version 7.x) :**
 ```bash
-composer require laravelcollective/html:^7.0
+composer require axn/laravel-collective-html:^7.0
 ```
 
 **Pour Laravel 6-10 (version 6.x) :**
 ```bash
 composer require laravelcollective/html:^6.0
 ```
+
+> **Note** : La version 7.x utilise le nouveau nom de package `axn/laravel-collective-html`, tandis que la version 6.x conserve l'ancien nom `laravelcollective/html`.
 
 ## Documentation
 
