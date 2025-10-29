@@ -1,12 +1,41 @@
-![LaravelCollective HTML](LaravelCollectiveHTML-banner.png)
+# LaravelCollective HTML - Laravel 11/12 Compatible Fork
 
-[![Build Status](https://travis-ci.org/LaravelCollective/html.svg)](https://travis-ci.org/LaravelCollective/html)
-[![Total Downloads](https://poser.pugx.org/LaravelCollective/html/downloads)](https://packagist.org/packages/laravelcollective/html)
-[![Latest Stable Version](https://poser.pugx.org/LaravelCollective/html/v/stable.svg)](https://packagist.org/packages/laravelcollective/html)
-[![Latest Unstable Version](https://poser.pugx.org/LaravelCollective/html/v/unstable.svg)](https://packagist.org/packages/laravelcollective/html)
-[![License](https://poser.pugx.org/LaravelCollective/html/license.svg)](https://packagist.org/packages/laravelcollective/html)
+Ce package est un fork de LaravelCollective HTML, compatible avec Laravel 10, 11 et 12.
 
-Official documentation for Forms & Html for The Laravel Framework can be found at the [LaravelCollective](https://laravelcollective.com/docs) website.
+## À propos
 
-## Replacement
-If you're looking to replace this package due to it's retirement we recommend using [Shift](https://laravelshift.com/convert-laravelcollective-html-to-spatie-laravel-html)
+Le package original LaravelCollective HTML a été abandonné. Ce fork maintient la compatibilité avec les versions récentes de Laravel (10, 11, 12) pour permettre aux applications existantes de continuer à fonctionner lors de leurs mises à jour.
+
+## Compatibilité
+
+- PHP: ^8.1
+- Laravel: ^10.0 | ^11.0 | ^12.0
+
+## Installation
+
+### 1. Ajouter le repository dans votre composer.json
+
+Ajoutez ce repository dans la section `repositories` de votre `composer.json` :
+
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/AXN-Informatique/laravel-collective-html"
+        }
+    ]
+}
+```
+
+### 2. Installer le package
+
+```bash
+composer require laravelcollective/html
+```
+
+## Documentation
+
+La documentation complète est disponible dans le fichier [DOCUMENTATION.md](DOCUMENTATION.md) de ce dépôt.
+
+Vous pouvez également consulter la documentation originale sur le site [LaravelCollective](https://laravelcollective.com/docs) (pour les anciennes versions).
