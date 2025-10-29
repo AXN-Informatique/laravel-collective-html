@@ -43,10 +43,10 @@ composer require axn/laravel-collective-html:^7.0
 
 **Pour Laravel 6-10 (version 6.x) :**
 ```bash
-composer require laravelcollective/html:^6.0
+composer require axn/laravel-collective-html:^6.0
 ```
 
-> **Note** : La version 7.x utilise le nouveau nom de package `axn/laravel-collective-html`, tandis que la version 6.x conserve l'ancien nom `laravelcollective/html`.
+> **Note** : La version 7.x utilise PHP 8.2+ et est optimisée pour Laravel 10-12, tandis que la version 6.x "historique" supporte PHP 7.2+ et Laravel 6-10.
 
 ## Documentation
 

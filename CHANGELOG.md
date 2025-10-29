@@ -1,6 +1,12 @@
 Changelog
 =========
 
+7.0.2 (2025-01-29)
+------------------
+
+- Ajustements mineurs dans le README
+
+
 7.0.1 (2025-01-29)
 ------------------
 
@@ -9,6 +15,7 @@ Changelog
 - Changement du nom du package de `laravelcollective/html` à `axn/laravel-collective-html`
 - Ajout d'AXN Informatique dans les auteurs
 - Mise à jour des URLs de support (issues et source) vers le repository AXN Informatique
+
 
 7.0.0 (2025-01-29)
 ------------------
