@@ -42,7 +42,8 @@
     "extra": {
         "branch-alias": {
             "dev-6.x": "6.x-dev",
-            "dev-develop": "7.x-dev"
+            "dev-7.x": "7.x-dev",
+            "dev-develop": "8.x-dev"
         },
         "laravel": {
             "providers": [
