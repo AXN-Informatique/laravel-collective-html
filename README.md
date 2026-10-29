@@ -1,19 +1,19 @@
-# LaravelCollective HTML - Laravel 11/12 Compatible Fork
+# LaravelCollective HTML - Laravel 11/12/13 Compatible Fork
 
-Ce package est un fork de LaravelCollective HTML, compatible avec Laravel 10, 11 et 12.
+Ce package est un fork de LaravelCollective HTML, compatible avec Laravel 10, 11, 12 et 13.
 
 ## À propos
 
-Le package original LaravelCollective HTML a été abandonné. Ce fork maintient la compatibilité avec les versions récentes de Laravel (10, 11, 12) pour permettre aux applications existantes de continuer à fonctionner lors de leurs mises à jour.
+Le package original LaravelCollective HTML a été abandonné. Ce fork maintient la compatibilité avec les versions récentes de Laravel (10, 11, 12, 13) pour permettre aux applications existantes de continuer à fonctionner lors de leurs mises à jour.
 
 ## Compatibilité
 
 - PHP: ^8.2
-- Laravel: ^10.0 | ^11.0 | ^12.0
+- Laravel: ^10.0 | ^11.0 | ^12.0 | ^13.0
 
 ## Versions
 
-- **7.x** : Laravel 10, 11, 12 + PHP 8.2+ (branche `7.x`)
+- **7.x** : Laravel 10, 11, 12, 13 + PHP 8.2+ (branche `7.x`)
 - **6.x** : Laravel 6-10 + PHP 7.2+ (branche `6.x`)
 - **develop** : Développement futur (8.x)
 
@@ -36,7 +36,7 @@ Ajoutez ce repository dans la section `repositories` de votre `composer.json` :
 
 ### 2. Installer le package
 
-**Pour Laravel 10, 11, 12 (version 7.x) :**
+**Pour Laravel 10, 11, 12, 13 (version 7.x) :**
 ```bash
 composer require axn/laravel-collective-html:^7.0
 ```
@@ -46,7 +46,7 @@ composer require axn/laravel-collective-html:^7.0
 composer require axn/laravel-collective-html:^6.0
 ```
 
-> **Note** : La version 7.x utilise PHP 8.2+ et est optimisée pour Laravel 10-12, tandis que la version 6.x "historique" supporte PHP 7.2+ et Laravel 6-10.
+> **Note** : La version 7.x utilise PHP 8.2+ et est optimisée pour Laravel 10-13, tandis que la version 6.x "historique" supporte PHP 7.2+ et Laravel 6-10.
 
 ## Documentation
 

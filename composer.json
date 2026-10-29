@@ -23,14 +23,14 @@
     ],
     "require": {
         "php": "^8.2",
-        "illuminate/http": "^10.0|^11.0|^12.0",
-        "illuminate/routing": "^10.0|^11.0|^12.0",
-        "illuminate/session": "^10.0|^11.0|^12.0",
-        "illuminate/support": "^10.0|^11.0|^12.0",
-        "illuminate/view": "^10.0|^11.0|^12.0"
+        "illuminate/http": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/routing": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/session": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/view": "^10.0|^11.0|^12.0|^13.0"
     },
     "require-dev": {
-        "illuminate/database": "^10.0|^11.0|^12.36",
+        "illuminate/database": "^10.0|^11.0|^12.36|^13.0",
         "laravel/pint": "^1.25.1",
         "mockery/mockery": "^1.6.12",
         "phpunit/phpunit": "^10.5|^11.5.42"
